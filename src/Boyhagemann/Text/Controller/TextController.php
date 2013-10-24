@@ -16,9 +16,9 @@ class TextController extends \BaseController
 		$fb->textarea('text')->label('Text')->required();
 	}
 
-	public function heading($text)
+	public function heading($heading, $text)
 	{
-		return $text;
+		return sprintf('<%s>%s</%s>', $heading, $text, $heading);
 	}
 
 	public function headingConfig(FormBuilder $fb)
