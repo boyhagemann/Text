@@ -24,7 +24,7 @@ class TextController extends \BaseController
 	public function headingConfig(FormBuilder $fb)
 	{
 		$fb->select('heading')->label('Heading')->choices(array('h1' => 'Biggest', 'h2' => 'Big', 'h3' => 'Medium'));
-		$fb->textarea('text')->label('Text')->required();
+		$fb->text('text')->label('Text')->required();
 	}
 }
 
