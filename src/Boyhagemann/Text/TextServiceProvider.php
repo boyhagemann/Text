@@ -18,7 +18,16 @@ class TextServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->package('text', 'text');
+	}
+    
+	/**
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{        
+        $this->app->make('formbuilder')->register('wysiwyg', 'Boyhagemann\Text\FormElement\Wysiwyg');
 	}
 
 	/**
@@ -28,7 +37,7 @@ class TextServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('text');
 	}
 
 }
