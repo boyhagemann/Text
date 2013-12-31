@@ -31,6 +31,7 @@ class AddTextDirectlyFromSection
             $block = Block::whereController('Boyhagemann\Text\Controller\TextController@textarea')->first();
                         
             $fb = App::make('formbuilder');
+
             $fb->route('admin.content.config.store');
             $fb->hidden('page_id')->value($page->id);
             $fb->hidden('section_id')->value($section->id);
